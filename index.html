@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Lab Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Final Project.css" />
+</head>
+<body>
+
+  <audio id="bg-music" loop>
+    <source src="Pictures and videos/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <nav>
+    <input class="nav-user" id="nav-user-input" type="text" placeholder="User Name" />
+    <input class="nav-password" type="password" placeholder="Password" />
+    <button class="nav-ok nav-ok-user" id="nav-ok-user">OK</button>
+    <span class="nav-msg" id="nav-msg"></span>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      <a href="#pictures">Rehearsal</a>
+      <a href="#pictures">Recording</a>
+      <a href="#pictures">Mix &amp; Master</a>
+      <a href="#pictures">Live Sessions</a>
+      <a href="#pictures">Prices</a>
+      <a href="#pictures">Gallery</a>
+      <a href="#pictures">Social Media</a>
+      <a href="#pictures">Contact Us</a>
+      <a href="#pictures">Merchandise</a>
+    </div>
+    <div class="logo">
+      <img src="Pictures and videos/ACC35597-5B7A-422F-8545-17F801523668_1_105_c.jpeg" alt="Music Lab Studio Logo" class="logo-img" />
+      <div class="logo-sub">Professional Rehearsal &amp; Recording Studio</div>
+      <div class="logo-contact">Address: 2530 Grand Concourse Bronx, NY 10458 &nbsp;|&nbsp; Tel: 929-530-9242 &nbsp;|&nbsp; email: musiclabstudio1@gmail.com</div>
+    </div>
+  </nav>
+
+  <section id="pictures">
+    <div class="gallery-grid">
+
+      <div class="gallery-box">
+        <video autoplay muted loop playsinline class="media-fill">
+          <source src="Pictures and videos/IMG_0929.MOV" type="video/mp4">
+        </video>
+        <span class="box-label">Rehearsal</span>
+      </div>
+
+      <div class="gallery-box">
+        <img src="Pictures and videos/IMG_2495.jpeg" alt="Recording Studio" class="media-fill" />
+        <span class="box-label">Recording</span>
+      </div>
+
+      <div class="gallery-box">
+        <img src="Pictures and videos/IMG_1789.jpeg" alt="Mix and Master" class="media-fill" />
+        <span class="box-label">Mix &amp; Master</span>
+      </div>
+
+      <div class="gallery-box">
+        <video autoplay muted loop playsinline class="media-fill">
+          <source src="Pictures and videos/IMG_2636.MOV" type="video/mp4">
+        </video>
+        <span class="box-label">Live Sessions</span>
+      </div>
+
+      <div class="gallery-box">
+        <img src="Pictures and videos/IMG_1173.JPG" alt="Prices" class="media-fill" />
+        <span class="box-label">Prices</span>
+      </div>
+
+      <div class="gallery-box">
+        <img src="Pictures and videos/IMG_1624.JPG" alt="Gallery" class="media-fill" />
+        <span class="box-label">Gallery</span>
+      </div>
+
+      <div class="gallery-box">
+        <video autoplay muted loop playsinline class="media-fill-top">
+          <source src="Pictures and videos/joined_video_98ac48c4141b449cb36dd2ba20232767.mp4" type="video/mp4">
+        </video>
+        <span class="box-label">Social Media</span>
+      </div>
+
+      <div class="gallery-box">
+        <img src="Pictures and videos/IMG_3611.jpeg" alt="Contact Us" class="media-fill" />
+        <span class="box-label">Contact Us</span>
+      </div>
+
+      <div class="gallery-box">
+        <img src="Pictures and videos/FC8CBCDD-D11D-4B29-BB1D-BB21503585E3.jpg" alt="Merchandise" class="media-fill" />
+        <span class="box-label">Merchandise</span>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-inner">
+      <button class="lightbox-close">&times;</button>
+      <p id="lightbox-label">Photo</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Status</a>
+      <a href="#">Contact</a>
+    </div>
+    <button class="music-btn" id="music-btn">
+      <span class="music-icon" id="music-icon">♪</span>
+      <span id="music-label">Play Music</span>
+    </button>
+    <span>&copy; 2026 Music Lab Studio. All rights reserved.</span>
+  </footer>
+
+  <script src="Final Project.js"></script>
+
+</body>
+</html>
