@@ -57,15 +57,26 @@ const lightboxLabel = document.getElementById('lightbox-label');
 
 document.querySelectorAll('.gallery-box').forEach((box, index) => {
   box.addEventListener('click', () => {
-    lightboxLabel.textContent = `Photo ${index + 1}`;
-    lightbox.classList.add('open');
+    if (box.dataset.href) {
+      window.location.href = box.dataset.href;
+      return;
+    }
+    if (lightbox && lightboxLabel) {
+      lightboxLabel.textContent = `Photo ${index + 1}`;
+      lightbox.classList.add('open');
+    }
   });
 });
 
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) lightbox.classList.remove('open');
-});
+if (lightbox) {
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.classList.remove('open');
+  });
+}
 
-document.querySelector('.lightbox-close').addEventListener('click', () => {
-  lightbox.classList.remove('open');
-});
+const lightboxClose = document.querySelector('.lightbox-close');
+if (lightboxClose) {
+  lightboxClose.addEventListener('click', () => {
+    lightbox.classList.remove('open');
+  });
+}

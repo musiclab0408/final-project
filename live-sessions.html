@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Sessions — Music Lab Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Final Project.css" />
+</head>
+<body>
+
+  <audio id="bg-music" loop>
+    <source src="Pictures and videos/background.mp3" type="audio/mpeg" />
+  </audio>
+
+  <nav>
+    <input class="nav-user" id="nav-user-input" type="text" placeholder="User Name" />
+    <input class="nav-password" type="password" placeholder="Password" />
+    <button class="nav-ok nav-ok-user" id="nav-ok-user">OK</button>
+    <span class="nav-msg" id="nav-msg"></span>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      <a href="index.html">Homepage</a>
+      <a href="index.html">Rehearsal</a>
+      <a href="recording.html">Recording</a>
+      <a href="index.html">Mix &amp; Master</a>
+      <a href="live-sessions.html">Live Sessions</a>
+      <a href="index.html">Prices</a>
+      <a href="index.html">Gallery</a>
+      <a href="social-media.html">Social Media</a>
+      <a href="index.html">Contact Us</a>
+      <a href="index.html">Merchandise</a>
+    </div>
+    <div class="logo">
+      <img src="Pictures and videos/ACC35597-5B7A-422F-8545-17F801523668_1_105_c.jpeg" alt="Music Lab Studio Logo" class="logo-img" />
+      <div class="logo-sub">Professional Rehearsal &amp; Recording Studio</div>
+      <div class="logo-contact">Address: 2530 Grand Concourse Bronx, NY 10458 &nbsp;|&nbsp; Tel: 929-530-9242 &nbsp;|&nbsp; email: musiclabstudio1@gmail.com</div>
+    </div>
+  </nav>
+
+  <main class="live-main">
+    <h1 class="live-title">Live Sessions</h1>
+    <p class="live-subtitle">Experience the energy of Music Lab Studio</p>
+
+    <div class="live-grid">
+
+
+      <div class="live-item">
+        <video controls class="live-video-local">
+          <source src="Pictures and videos/No fue culpa nuestra - A Piano y Voz (En Vivo).mp4" type="video/mp4" />
+        </video>
+        <p class="live-item-title">No Fue Culpa Nuestra — A Piano y Voz</p>
+      </div>
+
+      <div class="live-item">
+        <video controls class="live-video-local">
+          <source src="Pictures and videos/Secreto - A Piano Y Voz (En Vivo).mp4" type="video/mp4" />
+        </video>
+        <p class="live-item-title">Secreto — A Piano y Voz</p>
+      </div>
+
+      <div class="live-item">
+        <video controls class="live-video-local">
+          <source src="Pictures and videos/Si supieras - A Piano y voz (En Vivo).mp4" type="video/mp4" />
+        </video>
+        <p class="live-item-title">Si Supieras — A Piano y Voz</p>
+      </div>
+
+      <div class="live-item">
+        <video controls class="live-video-local">
+          <source src="Pictures and videos/Son tus ojos - A Piano y Voz (En vivo).mp4" type="video/mp4" />
+        </video>
+        <p class="live-item-title">Son Tus Ojos — A Piano y Voz</p>
+      </div>
+
+      <div class="live-item">
+        <video controls class="live-video-local">
+          <source src="Pictures and videos/Pepas.mp4" type="video/mp4" />
+        </video>
+        <p class="live-item-title">Pepas</p>
+      </div>
+
+      <div class="live-item">
+        <video controls class="live-video-local">
+          <source src="Pictures and videos/Ruddy Alcantara live.mp4" type="video/mp4" />
+        </video>
+        <p class="live-item-title">Ruddy Alcántara — En Vivo</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Status</a>
+      <a href="#">Contact</a>
+    </div>
+    <button class="music-btn" id="music-btn">
+      <span class="music-icon" id="music-icon">♪</span>
+      <span id="music-label">Play Music</span>
+    </button>
+    <span>&copy; 2026 Music Lab Studio. All rights reserved.</span>
+  </footer>
+
+  <script src="Final Project.js"></script>
+
+</body>
+</html>

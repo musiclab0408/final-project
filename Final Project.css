@@ -385,3 +385,234 @@ footer a:hover { color: var(--accent); }
     gap: 0.75rem;
   }
 }
+
+/* ── RECORDING PAGE ── */
+.recording-main {
+  padding: 213px 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recording-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+.recording-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.recording-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.recording-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.recording-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: block;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.recording-img:hover {
+  transform: scale(1.02);
+  border-color: #ffffff;
+}
+
+.recording-item-title {
+  color: var(--highlight);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .recording-main {
+    padding: 213px 1rem 3rem;
+  }
+  .recording-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── LIVE SESSIONS PAGE ── */
+.live-main {
+  padding: 213px 2rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.live-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+.live-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.live-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.live-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.live-video-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.live-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.live-video-local {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: block;
+}
+
+.live-item-title {
+  color: var(--highlight);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .live-main {
+    padding: 213px 1rem 3rem;
+  }
+}
+
+/* ── SOCIAL MEDIA PAGE ── */
+.social-main {
+  padding: 213px 2rem 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.social-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+.social-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 2rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.social-card:hover {
+  border-color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
+}
+
+.social-card-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.social-card-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.social-card-handle {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .social-main {
+    padding: 213px 1rem 3rem;
+  }
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
