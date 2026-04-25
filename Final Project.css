@@ -548,6 +548,9 @@ footer a:hover { color: var(--accent); }
   .live-main {
     padding: 213px 1rem 3rem;
   }
+  .live-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── SOCIAL MEDIA PAGE ── */
@@ -627,6 +630,6 @@ footer a:hover { color: var(--accent); }
     padding: 213px 1rem 3rem;
   }
   .social-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
