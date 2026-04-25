@@ -51,6 +51,14 @@ document.getElementById('music-btn').addEventListener('click', () => {
   }
 });
 
+// Pepas video preview at 0:04
+const pepasVideo = document.getElementById('pepas-video');
+if (pepasVideo) {
+  pepasVideo.addEventListener('loadedmetadata', () => {
+    pepasVideo.currentTime = 4;
+  });
+}
+
 // Lightbox
 const lightbox      = document.getElementById('lightbox');
 const lightboxLabel = document.getElementById('lightbox-label');
