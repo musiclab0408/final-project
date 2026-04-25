@@ -384,6 +384,20 @@ footer a:hover { color: var(--accent); }
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .music-btn {
+    order: -1;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
 }
 
 /* ── RECORDING PAGE ── */
