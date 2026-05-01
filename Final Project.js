@@ -3,7 +3,7 @@
   const users = JSON.parse(localStorage.getItem('mls_users') || '[]');
   const exists = users.find(u => u.username === 'musiclab0408');
   if (!exists) {
-    users.push({ username: 'musiclab0408', password: 'aldy2004', firstName: 'Aldemar', lastName: 'Vargas' });
+    users.push({ username: 'musiclab0408', password: 'aldy2004', firstName: 'Aldemar', lastName: 'Vargas', page: 'Aldemar Vargas.html' });
     localStorage.setItem('mls_users', JSON.stringify(users));
   }
 })();
@@ -27,12 +27,15 @@ document.getElementById('nav-ok-user').addEventListener('click', () => {
   if (match) {
     msg.textContent = `Welcome, ${match.firstName}!`;
     msg.style.color = '#00cc66';
+    input.value    = '';
+    password.value = '';
+    setTimeout(() => { window.location.href = match.page; }, 800);
   } else {
     msg.textContent = 'Incorrect username or password';
     msg.style.color = '#d0021b';
+    input.value    = '';
+    password.value = '';
   }
-  input.value    = '';
-  password.value = '';
 });
 
 // Logo spin
@@ -198,7 +201,7 @@ if (accountForm) {
 
     // Save credentials to localStorage so login works on all pages
     const users = JSON.parse(localStorage.getItem('mls_users') || '[]');
-    users.push({ username, password: passwordInput.value, firstName, lastName });
+    users.push({ username, password: passwordInput.value, firstName, lastName, page: `${firstName} ${lastName}.html` });
     localStorage.setItem('mls_users', JSON.stringify(users));
 
     // Download the file named FirstName LastName.html

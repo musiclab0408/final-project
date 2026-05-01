@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aldemar Vargas — Music Lab Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Final Project.css" />
+  <style>
+    .member-main { padding: 213px 2rem 4rem; max-width: 700px; margin: 0 auto; }
+    .member-welcome { font-family: 'Dancing Script', cursive; font-size: 3rem; font-weight: 700; color: #ffffff; text-align: center; margin-bottom: 2rem; letter-spacing: 0.04em; }
+    .member-card { background: #0d0d0d; border: 1px solid #1f1f1f; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+    .member-row { display: flex; gap: 0.5rem; font-size: 0.85rem; }
+    .member-key { color: #555555; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; min-width: 170px; }
+    .member-val { color: #e0e0e0; }
+  </style>
+</head>
+<body>
+  <audio id="bg-music" loop>
+    <source src="Pictures and videos/background.mp3" type="audio/mpeg" />
+  </audio>
+  <nav>
+    <input class="nav-user" id="nav-user-input" type="text" placeholder="User Name" />
+    <input class="nav-password" type="password" placeholder="Password" />
+    <button class="nav-ok nav-ok-user" id="nav-ok-user">OK</button>
+    <a class="nav-create-account" href="account-setup.html">Create an account</a>
+    <span class="nav-msg" id="nav-msg"></span>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
+      <a href="index.html">Homepage</a>
+      <a href="index.html">Rehearsal</a>
+      <a href="recording.html">Recording</a>
+      <a href="index.html">Mix &amp; Master</a>
+      <a href="live-sessions.html">Live Sessions</a>
+      <a href="index.html">Prices</a>
+      <a href="index.html">Gallery</a>
+      <a href="social-media.html">Social Media</a>
+      <a href="index.html">Contact Us</a>
+      <a href="index.html">Merchandise</a>
+    </div>
+    <div class="logo">
+      <img src="Pictures and videos/ACC35597-5B7A-422F-8545-17F801523668_1_105_c.jpeg" alt="Music Lab Studio Logo" class="logo-img" />
+      <div class="logo-sub">Professional Rehearsal &amp; Recording Studio</div>
+      <div class="logo-contact">Address: 2530 Grand Concourse Bronx, NY 10458 &nbsp;|&nbsp; Tel: 929-530-9242 &nbsp;|&nbsp; email: musiclabstudio1@gmail.com</div>
+    </div>
+  </nav>
+  <main class="member-main">
+    <h1 class="member-welcome">Welcome, Aldemar!</h1>
+    <div class="member-card">
+      <div class="member-row"><span class="member-key">First Name</span><span class="member-val">Aldemar</span></div>
+      <div class="member-row"><span class="member-key">Last Name</span><span class="member-val">Vargas</span></div>
+      <div class="member-row"><span class="member-key">Address</span><span class="member-val">2719 Gifford Ave</span></div>
+      <div class="member-row"><span class="member-key">City</span><span class="member-val">Bronx</span></div>
+      <div class="member-row"><span class="member-key">State</span><span class="member-val">New York</span></div>
+      <div class="member-row"><span class="member-key">Zip Code</span><span class="member-val">10465</span></div>
+      <div class="member-row"><span class="member-key">Phone Number</span><span class="member-val">917-280-9454</span></div>
+      <div class="member-row"><span class="member-key">Email Address</span><span class="member-val">musiclab0408@gmail.com</span></div>
+      <div class="member-row"><span class="member-key">Band / Artist Name</span><span class="member-val">Music Lab All Stars</span></div>
+      <div class="member-row"><span class="member-key">Username</span><span class="member-val">musiclab0408</span></div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Status</a>
+      <a href="#">Contact</a>
+    </div>
+    <button class="music-btn" id="music-btn">
+      <span class="music-icon" id="music-icon">♪</span>
+      <span id="music-label">Play Music</span>
+    </button>
+    <span>&copy; 2026 Music Lab Studio. All rights reserved.</span>
+  </footer>
+  <script src="Final Project.js"></script>
+</body>
+</html>
