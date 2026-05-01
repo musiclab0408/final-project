@@ -3,16 +3,22 @@ document.getElementById('hamburger').addEventListener('click', () => {
   document.getElementById('nav-menu').classList.toggle('open');
 });
 
-// Auth
+// Auth — checks credentials saved in localStorage from account-setup
 document.getElementById('nav-ok-user').addEventListener('click', () => {
   const input    = document.getElementById('nav-user-input');
   const password = document.querySelector('.nav-password');
   const msg      = document.getElementById('nav-msg');
-  if (input.value.trim().toLowerCase() === 'hello') {
-    msg.textContent = 'Successful';
+
+  const users = JSON.parse(localStorage.getItem('mls_users') || '[]');
+  const match = users.find(u =>
+    u.username === input.value.trim() && u.password === password.value
+  );
+
+  if (match) {
+    msg.textContent = `Welcome, ${match.firstName}!`;
     msg.style.color = '#00cc66';
   } else {
-    msg.textContent = 'Incorrect';
+    msg.textContent = 'Incorrect username or password';
     msg.style.color = '#d0021b';
   }
   input.value    = '';
@@ -179,6 +185,11 @@ if (accountForm) {
   <script src="Final Project.js"></script>
 </body>
 </html>`;
+
+    // Save credentials to localStorage so login works on all pages
+    const users = JSON.parse(localStorage.getItem('mls_users') || '[]');
+    users.push({ username, password: passwordInput.value, firstName, lastName });
+    localStorage.setItem('mls_users', JSON.stringify(users));
 
     // Download the file named FirstName LastName.html
     const blob = new Blob([html], { type: 'text/html' });
