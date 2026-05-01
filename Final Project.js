@@ -51,6 +51,47 @@ document.getElementById('music-btn').addEventListener('click', () => {
   }
 });
 
+// Account setup form validation
+const accountForm = document.getElementById('account-form');
+if (accountForm) {
+  accountForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const usernameInput  = document.getElementById('username');
+    const passwordInput  = document.getElementById('new-password');
+    const usernameError  = document.getElementById('username-error');
+    const passwordError  = document.getElementById('password-error');
+    const successMsg     = document.getElementById('account-success');
+    let valid = true;
+
+    // Validate username
+    if (usernameInput.value.trim().length < 6) {
+      usernameError.classList.add('visible');
+      usernameInput.style.borderColor = '#d0021b';
+      valid = false;
+    } else {
+      usernameError.classList.remove('visible');
+      usernameInput.style.borderColor = '';
+    }
+
+    // Validate password
+    if (passwordInput.value.length < 8) {
+      passwordError.classList.add('visible');
+      passwordInput.style.borderColor = '#d0021b';
+      valid = false;
+    } else {
+      passwordError.classList.remove('visible');
+      passwordInput.style.borderColor = '';
+    }
+
+    if (valid) {
+      successMsg.classList.add('visible');
+      accountForm.reset();
+    } else {
+      successMsg.classList.remove('visible');
+    }
+  });
+}
+
 // Lightbox
 const lightbox      = document.getElementById('lightbox');
 const lightboxLabel = document.getElementById('lightbox-label');

@@ -645,3 +645,139 @@ footer a:hover { color: var(--accent); }
     grid-template-columns: 1fr;
   }
 }
+
+/* ── ACCOUNT SETUP PAGE ── */
+.account-main {
+  padding: 213px 2rem 4rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.account-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+.account-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.account-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.account-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.account-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--highlight);
+}
+
+.account-hint {
+  font-weight: 400;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.account-input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.account-input:focus {
+  border-color: #ffffff;
+}
+
+.account-input::placeholder {
+  color: var(--muted);
+}
+
+.account-error {
+  font-size: 0.68rem;
+  color: var(--red);
+  display: none;
+  letter-spacing: 0.03em;
+}
+
+.account-error.visible {
+  display: block;
+}
+
+.account-submit {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  padding: 0.65rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.account-submit:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.account-success {
+  display: none;
+  color: #00cc66;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+
+.account-success.visible {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .account-main {
+    padding: 213px 1rem 3rem;
+  }
+  .account-row {
+    grid-template-columns: 1fr;
+  }
+  .account-submit {
+    width: 100%;
+    text-align: center;
+  }
+}
