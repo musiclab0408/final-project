@@ -1,3 +1,13 @@
+// Seed default admin account
+(function () {
+  const users = JSON.parse(localStorage.getItem('mls_users') || '[]');
+  const exists = users.find(u => u.username === 'musiclab0408');
+  if (!exists) {
+    users.push({ username: 'musiclab0408', password: 'aldy2004', firstName: 'Aldemar', lastName: 'Vargas' });
+    localStorage.setItem('mls_users', JSON.stringify(users));
+  }
+})();
+
 // Hamburger menu
 document.getElementById('hamburger').addEventListener('click', () => {
   document.getElementById('nav-menu').classList.toggle('open');
